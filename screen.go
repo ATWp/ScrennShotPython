@@ -1,8 +1,8 @@
 package main
 import (
-    "fmt"
+	"fmt"
 	"bufio"
-    "io"
+	"io"
 	"os/exec"
 )
 
@@ -15,7 +15,7 @@ func copyOutput(r io.Reader) {
 
 func Start_py(){
 	cmd := exec.Command("python", "screnDoings.py")
-    stdout, err := cmd.StdoutPipe()
+	stdout, err := cmd.StdoutPipe()
     if err != nil {
         panic(err)
     }
@@ -37,7 +37,6 @@ func Start_py(){
 
 
 func main() {
-
 	Start_py()
 	fmt.Print("Press 'Alt' to doings screenshot...")
 	fmt.Print("Press 'Ctrl + Q' to close...")
